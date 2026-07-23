@@ -8,6 +8,7 @@ dotenv.config();
 const port = process.env.PORT || 5001;
 const app = express();
 const __dirname = path.resolve();
+app.use("/api/notes", notesRoutes);
 // middle ware
 app.use(express.json()); // this  middle layer will parse the json bodies
 
@@ -20,7 +21,6 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
   });
 }
-app.use("/api/notes", notesRoutes);
 connectDB().then(() => {
   app.listen(port, () => {
     console.log(`server started at PORT ${port} `);
