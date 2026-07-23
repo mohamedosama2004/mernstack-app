@@ -1,0 +1,21 @@
+{
+  "name": "mernstack-app",
+  "version": "1.0.0",
+  "description": "This is a full-stack NotePad application built using the MERN (MongoDB, Express.js, React, Node.js) stack. It allows users to create, read, update, and delete notes, featuring a responsive frontend with theme toggling and API rate limiting on the backend.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix backend && --prefix frontend && npm run build --prefix frontend" ,
+    "start": "npm run start --prefix backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedosama2004/mernstack-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohamedosama2004/mernstack-app/issues"
+  },
+  "homepage": "https://github.com/mohamedosama2004/mernstack-app#readme"
+}
